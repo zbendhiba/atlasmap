@@ -31,7 +31,8 @@ public class Json {
         .configure(SerializationFeature.WRAP_ROOT_VALUE, true)
         .configure(DeserializationFeature.UNWRAP_ROOT_VALUE, true)
         .configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true)
-        .setSerializationInclusion(Include.NON_NULL);
+        .setSerializationInclusion(Include.NON_NULL)
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
     private Json() {
     }
